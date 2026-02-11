@@ -3,7 +3,7 @@ import { Container, Box, Typography, AppBar, Toolbar, Button } from '@mui/materi
 import { SignIn } from '@clerk/nextjs'
 import Link from 'next/link'
 
-export default function SignUpPage() {
+export default function SignInPage() {
 
     return (<Container maxWidth="100vw">
          <AppBar position="static" sx={{backgroundColor: '#1976d2'}}>

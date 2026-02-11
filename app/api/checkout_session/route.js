@@ -13,10 +13,10 @@ export async function GET(req) {
   const session_id = searchParams.get('session_id')
 
   try {
-    const checoutSession = await stripe.checkout.sessions.retrieve(session_id)
+    const checkoutSession = await stripe.checkout.sessions.retrieve(session_id)
     return NextResponse.json(checkoutSession)
   } catch (error) {
-    console.Console.error('Error retrueving checkout session: ', error)
+    console.error('Error retrieving checkout session:', error)
     return NextResponse.json({error: {message: error.message}}, {status: 500})
   }
 }
